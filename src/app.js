@@ -8,6 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
 
+  //generar la mesa
   let table = document.getElementById("table");
   table.style.backgroundColor = "green";
   table.style.width = "1000px";
@@ -15,6 +16,7 @@ window.onload = function() {
   table.style.margin = "0 auto";
   table.style.position = "relative";
 
+  //generar carta en blanco
   let card = document.createElement("div");
   card.style.backgroundColor = "white";
   card.style.width = "300px";
@@ -24,10 +26,13 @@ window.onload = function() {
   card.style.position = "relative";
   table.appendChild(card);
 
+  //setear los valores que tomara la carta
   let values = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
+  //crear el elemento que tendra el valor de la carta
   let value = document.createElement("h1");
 
+  //generar elementos de la carta aleatoriamente
   switch (Math.floor(Math.random() * 4 + 1)) {
     case 1:
       let heartOne = document.createElement("h1");
@@ -39,6 +44,7 @@ window.onload = function() {
       heartOne.style.fontSize = "100px";
       heartOne.textContent = "♥";
 
+      //asignar un valor aleatorio a la carta
       value.textContent = values[Math.floor(Math.random() * 10 + 1)];
       value.style.textAlign = "center";
       value.style.position = "absolute";
@@ -46,7 +52,6 @@ window.onload = function() {
       value.style.right = "50px";
       value.style.left = "50px";
       value.style.fontSize = "200px";
-      console.log(value.textContent);
 
       heartTwo.style.color = "red";
       heartTwo.style.textAlign = "right";
@@ -56,6 +61,7 @@ window.onload = function() {
       heartTwo.style.fontSize = "100px";
       heartTwo.textContent = "♥";
 
+      //crear la carta
       card.appendChild(heartOne);
       card.appendChild(value);
       card.appendChild(heartTwo);
@@ -70,6 +76,7 @@ window.onload = function() {
       diamondOne.style.fontSize = "100px";
       diamondOne.textContent = "♦";
 
+      //asignar un valor aleatorio a la carta
       value.textContent = values[Math.floor(Math.random() * 10 + 1)];
       value.style.textAlign = "center";
       value.style.position = "absolute";
@@ -77,7 +84,6 @@ window.onload = function() {
       value.style.right = "50px";
       value.style.left = "50px";
       value.style.fontSize = "200px";
-      console.log(value.textContent);
 
       diamondTwo.style.color = "red";
       diamondTwo.style.textAlign = "right";
@@ -87,6 +93,7 @@ window.onload = function() {
       diamondTwo.style.fontSize = "100px";
       diamondTwo.textContent = "♦";
 
+      //crear la carta
       card.appendChild(diamondOne);
       card.appendChild(value);
       card.appendChild(diamondTwo);
@@ -101,6 +108,7 @@ window.onload = function() {
       spadeOne.style.fontSize = "100px";
       spadeOne.textContent = "♠";
 
+      //asignar un valor aleatorio a la carta
       value.textContent = values[Math.floor(Math.random() * 10 + 1)];
       value.style.textAlign = "center";
       value.style.position = "absolute";
@@ -108,7 +116,6 @@ window.onload = function() {
       value.style.right = "50px";
       value.style.left = "50px";
       value.style.fontSize = "200px";
-      console.log(value.textContent);
 
       spadeTwo.style.color = "black";
       spadeTwo.style.textAlign = "right";
@@ -118,6 +125,7 @@ window.onload = function() {
       spadeTwo.style.fontSize = "100px";
       spadeTwo.textContent = "♠";
 
+      //crear la carta
       card.appendChild(spadeOne);
       card.appendChild(value);
       card.appendChild(spadeTwo);
@@ -132,6 +140,7 @@ window.onload = function() {
       clubOne.style.fontSize = "100px";
       clubOne.textContent = "♣";
 
+      //asignar un valor aleatorio a la carta
       value.textContent = values[Math.floor(Math.random() * 10 + 1)];
       value.style.textAlign = "center";
       value.style.position = "absolute";
@@ -149,6 +158,7 @@ window.onload = function() {
       clubTwo.style.fontSize = "100px";
       clubTwo.textContent = "♣";
 
+      //crear la carta
       card.appendChild(clubOne);
       card.appendChild(value);
       card.appendChild(clubTwo);
