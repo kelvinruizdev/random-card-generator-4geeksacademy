@@ -26,11 +26,12 @@ window.onload = function() {
 
   let values = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
-  switch (Math.floor(Math.random() * 1 + 1)) {
+  let value = document.createElement("h1");
+
+  switch (Math.floor(Math.random() * 4 + 1)) {
     case 1:
       let heartOne = document.createElement("h1");
       let heartTwo = document.createElement("h1");
-      let value = document.createElement("h1");
 
       heartOne.style.color = "red";
       heartOne.style.textAlign = "left";
@@ -69,6 +70,15 @@ window.onload = function() {
       diamondOne.style.fontSize = "100px";
       diamondOne.textContent = "♦";
 
+      value.textContent = values[Math.floor(Math.random() * 10 + 1)];
+      value.style.textAlign = "center";
+      value.style.position = "absolute";
+      value.style.top = "90px";
+      value.style.right = "50px";
+      value.style.left = "50px";
+      value.style.fontSize = "200px";
+      console.log(value.textContent);
+
       diamondTwo.style.color = "red";
       diamondTwo.style.textAlign = "right";
       diamondTwo.style.position = "absolute";
@@ -78,6 +88,7 @@ window.onload = function() {
       diamondTwo.textContent = "♦";
 
       card.appendChild(diamondOne);
+      card.appendChild(value);
       card.appendChild(diamondTwo);
       break;
 
@@ -90,6 +101,15 @@ window.onload = function() {
       spadeOne.style.fontSize = "100px";
       spadeOne.textContent = "♠";
 
+      value.textContent = values[Math.floor(Math.random() * 10 + 1)];
+      value.style.textAlign = "center";
+      value.style.position = "absolute";
+      value.style.top = "90px";
+      value.style.right = "50px";
+      value.style.left = "50px";
+      value.style.fontSize = "200px";
+      console.log(value.textContent);
+
       spadeTwo.style.color = "black";
       spadeTwo.style.textAlign = "right";
       spadeTwo.style.position = "absolute";
@@ -99,6 +119,7 @@ window.onload = function() {
       spadeTwo.textContent = "♠";
 
       card.appendChild(spadeOne);
+      card.appendChild(value);
       card.appendChild(spadeTwo);
       break;
 
@@ -111,6 +132,15 @@ window.onload = function() {
       clubOne.style.fontSize = "100px";
       clubOne.textContent = "♣";
 
+      value.textContent = values[Math.floor(Math.random() * 10 + 1)];
+      value.style.textAlign = "center";
+      value.style.position = "absolute";
+      value.style.top = "90px";
+      value.style.right = "50px";
+      value.style.left = "50px";
+      value.style.fontSize = "200px";
+      console.log(value.textContent);
+
       clubTwo.style.color = "black";
       clubTwo.style.textAlign = "right";
       clubTwo.style.position = "absolute";
@@ -120,6 +150,7 @@ window.onload = function() {
       clubTwo.textContent = "♣";
 
       card.appendChild(clubOne);
+      card.appendChild(value);
       card.appendChild(clubTwo);
       break;
   }
