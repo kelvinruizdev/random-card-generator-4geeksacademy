@@ -39,6 +39,12 @@ window.onload = function() {
       heartOne.textContent = "♥";
 
       value.textContent = values[Math.floor(Math.random() * 10 + 1)];
+      value.style.textAlign = "center";
+      value.style.position = "absolute";
+      value.style.top = "90px";
+      value.style.right = "50px";
+      value.style.left = "50px";
+      value.style.fontSize = "200px";
       console.log(value.textContent);
 
       heartTwo.style.color = "red";
@@ -50,6 +56,7 @@ window.onload = function() {
       heartTwo.textContent = "♥";
 
       card.appendChild(heartOne);
+      card.appendChild(value);
       card.appendChild(heartTwo);
       break;
 
@@ -116,29 +123,4 @@ window.onload = function() {
       card.appendChild(clubTwo);
       break;
   }
-
-  // for (let i = 0; i < tipe.length; i++) {
-
-  // }
-
-  // let heart = document.createElement("h1");
-  // heart.style.color = "red";
-  // heart.textContent = "♥";
-
-  /*let diamond = document.createElement("h1");
-  diamond.style.color = "red";
-  diamond.textContent = "♦";
-
-  let spade = document.createElement("h1");
-  spade.style.color = "black";
-  spade.textContent = "♠";
-
-  let club = document.createElement("h1");
-  club.style.color = "black";
-  club.textContent = " ♣";
-
-  card.appendChild(heart);
-  card.appendChild(diamond);
-  card.appendChild(spade);
-  card.appendChild(club);*/
 };
